@@ -9,10 +9,9 @@ unzip ./boxysvgrpi.zip
 chromium-browser --load-and-launch-app=$(pwd)/boxysvgrpi
 cd
 ```
-From now on you can run Boxy SVG from the main menu.
+Chromium creates a menu button for you. From now on you can run Boxy SVG from the main menu.
 
 # To uninstall:
 ```
-rm -rf Boxy-SVG-RPi
+rm -rf Boxy-SVG-RPi ~/.local/share/applications/chrome-gaoogdonmngmdlbinmiclicjpbjhgomg-Default.desktop
 ```
-Then, in Chromium, go to the chrome://extensions website, find Boxy SVG in the list, and click Remove.
