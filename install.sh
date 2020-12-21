@@ -6,7 +6,7 @@ function error {
 }
 
 if ! command -v yad &>/dev/null ;then
-  echo "installing yad..."
+  echo "Installing yad..."
   sudo apt install -y yad
   if ! command -v yad &>/dev/null ;then
     error "YAD failed to install somehow!"
@@ -14,7 +14,7 @@ if ! command -v yad &>/dev/null ;then
 fi
 
 if ! command -v git &>/dev/null ;then
-  echo "installing git..."
+  echo "Installing git..."
   sudo apt install -y git
   if ! command -v git &>/dev/null ;then
     error "git failed to install somehow!"
@@ -51,7 +51,7 @@ else
   
   sleep 5
   echo "Go to this URL in your browser:
-  chrome:extensions" | yad --text-info \
+chrome:extensions" | yad --text-info \
     --image=$(pwd)/extensions.png --image-on-top \
     --button=Next:0 \
     --title="Step 1: go to chrome:extensions" \
