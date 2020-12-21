@@ -5,6 +5,22 @@ function error {
   exit 1
 }
 
+if ! command -v yad &>/dev/null ;then
+  echo "Installing yad..."
+  sudo apt install -y yad
+  if ! command -v yad &>/dev/null ;then
+    error "YAD failed to install somehow!"
+  fi
+fi
+
+if ! command -v git &>/dev/null ;then
+  echo "Installing git..."
+  sudo apt install -y git
+  if ! command -v git &>/dev/null ;then
+    error "git failed to install somehow!"
+  fi
+fi
+
 if [ ! -d ~/Boxy-SVG-RPi ];then
   echo "Downloading Boxy-SVG-RPi repo now..."
   git clone https://github.com/Botspot/Boxy-SVG-RPi || error "failed to git clone!"
@@ -35,7 +51,7 @@ else
   
   sleep 5
   echo "Go to this URL in your browser:
-  chrome:extensions" | yad --text-info \
+chrome:extensions" | yad --text-info \
     --image=$(pwd)/extensions.png --image-on-top \
     --button=Next:0 \
     --title="Step 1: go to chrome:extensions" \
