@@ -3,13 +3,9 @@ Fork of the Boxy SVG Chrome App for use on Raspberry Pi.
 
 # To install:
 ```
-git clone https://github.com/Botspot/Boxy-SVG-RPi
-cd Boxy-SVG-RPi
-unzip ./boxysvgrpi.zip
-chromium-browser --load-and-launch-app=$(pwd)/boxysvgrpi
-cd
+wget -qO- https://raw.githubusercontent.com/Botspot/Boxy-SVG-RPi/main/install.sh | bash
 ```
-Chromium creates a menu button for you. From now on you can run Boxy SVG from the main menu.
+Chromium creates a menu button for you. From now on you can run Boxy SVG from the main menu, or by opening a svg image.
 
 # To uninstall:
 ```
