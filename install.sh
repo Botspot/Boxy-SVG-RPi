@@ -49,9 +49,13 @@ mkdir -p ~/.config/chromium/Boxysvg
 cp ./Preferences ~/.config/chromium/Boxysvg/Preferences
 sed -i "s+/home/pi+$HOME+g" ~/.config/chromium/Boxysvg/Preferences
 
+#icons
+mkdir -p ~/.local/share/icons/hicolor
+cp -a ./icons/. ~/.local/share/icons/hicolor
+
 #menu button
 rm -f /home/pi/.local/share/applications/*gaoogdonmngmdlbinmiclicjpbjhgomg*
-
+mkdir -p ~/.local/share/applications
 #create menu launcher
 echo "#!/usr/bin/env xdg-open
 [Desktop Entry]
@@ -59,7 +63,7 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=Boxy SVG
-Exec=/usr/bin/chromium-browser --profile-directory=Boxysvg --app-id=gaoogdonmngmdlbinmiclicjpbjhgomg %f
+Exec=$browser --profile-directory=Boxysvg --app-id=gaoogdonmngmdlbinmiclicjpbjhgomg %f
 Icon=chrome-gaoogdonmngmdlbinmiclicjpbjhgomg-Boxysvg
 StartupWMClass=crx_gaoogdonmngmdlbinmiclicjpbjhgomg
 Categories=Graphics;
