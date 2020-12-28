@@ -70,7 +70,7 @@ Categories=Graphics;
 MimeType=image/svg+xml;
 StartupNotify=true" >> ~/.local/share/applications/chrome-gaoogdonmngmdlbinmiclicjpbjhgomg-Boxysvg.desktop
 
-if [ -z "$(cat ~/.config/mimeapps.list | grep 'gaoogdonmngmdlbinmiclicjpbjhgomg')" ];then
+if [ -z "$(cat ~/.config/mimeapps.list | grep 'gaoogdonmngmdlbinmiclicjpbjhgomg-Boxysvg')" ];then
   echo "Associating the SVG mimetype with Boxy SVG..."
   echo "[Added Associations]
 image/svg+xml=chrome-gaoogdonmngmdlbinmiclicjpbjhgomg-Boxysvg.desktop;" >> ~/.config/mimeapps.list
