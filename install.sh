@@ -44,10 +44,11 @@ else
 fi
 
 #make chromium config with boxy svg pre-installed
-rm -rf ~/.config/chromium/Boxysvg
-mkdir -p ~/.config/chromium/Boxysvg
-cp ./Preferences ~/.config/chromium/Boxysvg/Preferences
-sed -i "s+/home/pi+$HOME+g" ~/.config/chromium/Boxysvg/Preferences
+rm -rf ~/.config/BoxySVG
+mkdir -p ~/.config/BoxySVG/Default
+cp ./Preferences ~/.config/BoxySVG/Default/Preferences
+echo '' > ~/'.config/BoxySVG/First Run'
+sed -i "s+/home/pi+$HOME+g" ~/.config/BoxySVG/Default/Preferences
 
 #icons
 mkdir -p ~/.local/share/icons/hicolor
@@ -63,7 +64,7 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=Boxy SVG
-Exec=$browser --profile-directory=Boxysvg --app-id=gaoogdonmngmdlbinmiclicjpbjhgomg %f
+Exec=$browser --user-data-dir=$HOME/.config/BoxySVG --profile-directory=Default --app-id=gaoogdonmngmdlbinmiclicjpbjhgomg %f
 Icon=chrome-gaoogdonmngmdlbinmiclicjpbjhgomg-Boxysvg
 StartupWMClass=crx_gaoogdonmngmdlbinmiclicjpbjhgomg
 Categories=Graphics;
