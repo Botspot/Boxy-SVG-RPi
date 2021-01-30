@@ -55,7 +55,7 @@ mkdir -p ~/.local/share/icons/hicolor
 cp -a ./icons/. ~/.local/share/icons/hicolor
 
 #menu button
-rm -f /home/pi/.local/share/applications/*gaoogdonmngmdlbinmiclicjpbjhgomg*
+rm -f ~/.local/share/applications/*gaoogdonmngmdlbinmiclicjpbjhgomg*
 mkdir -p ~/.local/share/applications
 #create menu launcher
 echo "#!/usr/bin/env xdg-open
