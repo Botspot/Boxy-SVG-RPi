@@ -40,7 +40,7 @@ if command -v chromium-browser &>/dev/null;then
 elif command -v chromium &>/dev/null;then
   browser="$(command -v chromium)"
 else
-  error "You must have Chromium Browser installed to use the Boxy SVG Chrome App!"
+  error "User error: You must have Chromium Browser installed to use the Boxy SVG Chrome App!"
 fi
 
 #make chromium config with boxy svg pre-installed
